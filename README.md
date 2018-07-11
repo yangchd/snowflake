@@ -41,8 +41,7 @@ uint64_t waitNextMs(uint64_t lastStamp){
 一句话描述：以下演算模拟了1482394743339这一毫秒时刻，workerId＝1，datacenterId＝2的id生成器，生产第一个id的过程。  
 ![](resources/3.png)  
 
-
-###参考
+### 参考
 https://github.com/twitter/snowflake  
 http://www.cnblogs.com/relucent/p/4955340.html  
 https://blog.csdn.net/li396864285/article/details/54668031  
