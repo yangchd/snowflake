@@ -2,6 +2,8 @@
 
 Twitter的分布式自增ID算法snowflake (Java版)
 
+[看代码戳这里](java/com/yangchd/idworker/SnowflakeIdWorker.java)
+
 #### 1、背景
 Twitter-Snowflake算法产生的背景相当简单，为了满足Twitter每秒上万条消息的请求，每条消息都必须分配一条唯一的id，这些id还需要一些大致的顺序（方便客户端排序），并且在分布式系统中不同机器产生的id必须不同。
 #### 2、Snowflake算法核心
