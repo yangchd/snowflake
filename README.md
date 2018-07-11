@@ -36,3 +36,13 @@ uint64_t waitNextMs(uint64_t lastStamp){
 }
 ```
 总体来说，是一个很高效很方便的GUID产生算法，一个int64_t字段就可以胜任，不像现在主流128bit的GUID算法，即使无法保证严格的id序列性，但是对于特定的业务，比如用做游戏服务器端的GUID产生会很方便。另外，在多线程的环境下，序列号使用atomic可以在代码实现上有效减少锁的密度。
+
+#### 3、snowflake算法推导和演算过程
+一句话描述：以下演算模拟了1482394743339这一毫秒时刻，workerId＝1，datacenterId＝2的id生成器，生产第一个id的过程。  
+![](resources/3.png)  
+
+
+###参考
+https://github.com/twitter/snowflake  
+http://www.cnblogs.com/relucent/p/4955340.html  
+https://blog.csdn.net/li396864285/article/details/54668031  
